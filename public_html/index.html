@@ -26,7 +26,7 @@
                   <div class="container-fluid h-25" style="border: 3px solid blue;"></div>
                   <div class="container-fluid h-50" style="border: 3px solid blue;"></div>
                   <div class="container-fluid h-25" style="border: 3px solid blue;"></div>                  
-              </div>
+              </div>              
               <div id="mainArea" class="col-8" style="border: 3px solid red;">
                   <h1>Питомник норвержских лесных кошек Ikstlan в Москве</h1>
                   <p>Доброго времени, гость! Располагайся. Мы из породы норвержских лесных кошек. Мы крепки здоровьем и психикой. Нас никто не выводил не скрещивал. Человек, к счастью, не участвовал в нас. Мы естественный результат эволюции в условиях суровой северной природы</p>
@@ -42,19 +42,17 @@
                   <p>С нами можно гулять в том числе и зимой. Мы любим снег и легкий зимний ветер. Нам нужно движение почти так же как кислород.</p>
                   <p>Мы верные друзья. От нас нет проблем и мы не требуем слишком многого. Ревность и излишние проявления эмоций совершенно не про нас, но с другой стороны можем и поиграть под настроение.</p>
                   <p>Сейчас наша стоянка в русском городе Москва. Мы официально зарегистрированы в ICU (International Cat Union)</p>
+              </div>            
+          </div>
+          <div class="row">
+              <div id="newsAreaBottom" class="col" style="border: 3px solid brown;">                  
+                  <div class="container-fluid h-25" style="border: 3px solid blue;">lorem ipsum lorem ipsum lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</div>
+                  <div class="container-fluid h-50" style="border: 3px solid blue;">lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</div>
+                  <div class="container-fluid h-25" style="border: 3px solid blue;">lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum</div>                  
               </div>
           </div>
-      </div> <!--style="border: 3px solid red;"-->
-      
-<!--      <div class="container-fluid">
-          <div class="d-flex p-3 flex-wrap" style="border: 3px solid blue;">
-              <img src="images/logo2.png" class="m-3 rounded-circle" style="border: 3px solid red;" alt="">
-              <img src="images/logo2.png" class="m-3 rounded-circle" style="border: 3px solid red;" alt="">
-              <img src="images/logo2.png" class="m-3 rounded-circle" style="border: 3px solid red;" alt="">
-          </div>
-      </div>    -->
+      </div>
     
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -63,24 +61,39 @@
     <script>
         $(window).resize(function() {
             
-            var $mainArea = $("#mainArea");
-            var $newsArea = $("#newsArea");
+            var $mainArea       = $("#mainArea");
+            var $newsArea       = $("#newsArea");
+            var $newsAreaBottom = $("#newsAreaBottom");
             
             if (window.matchMedia('(max-width: 575.98px)').matches) {                
                 
-                $newsArea.hide();
+                if ($newsArea.is(':visible')) {
+                    $newsArea.hide();
+                }
+                
                 if ($mainArea.hasClass('col-8')) {
                     $mainArea.removeClass('col-8');
                     $mainArea.addClass('col-12');
                 }
                 
+                if ($newsArea.is(':hidden')) {
+                    $newsAreaBottom.show();                 
+                }                
+                
             } else {
                 
-                $newsArea.show();
+                if ($newsArea.is(':hidden')) {
+                    $newsArea.show();
+                }
+                                
                 if ($mainArea.hasClass('col-12')) {
                     $mainArea.removeClass('col-12');
                     $mainArea.addClass('col-8');
                 }
+                
+                if ($newsArea.is(':visible')) {
+                    $newsAreaBottom.hide();                 
+                } 
                 
             }
             
