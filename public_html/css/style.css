@@ -1,8 +1,18 @@
 
+@font-face {
+    font-family: Montresor; 
+    src: url(../Fonts/Montresor.ttf); 
+}
+
 body {
     background: url(../images/main.jpg) center no-repeat;
     background-size: cover;
+    font-family: 'Comic Sans MS', cursive;
 }
+
+/*nav, h1, h2, h3 {
+    font-family: Montresor, 'Comic Sans MS', cursive;
+}*/
 
 #subLogo {
     margin-right: 1%; 
