@@ -10,10 +10,6 @@ body {
     font-family: 'Comic Sans MS', cursive;
 }
 
-/*nav, h1, h2, h3 {
-    font-family: Montresor, 'Comic Sans MS', cursive;
-}*/
-
 #subLogo {
     margin-right: 1%; 
     float: left;
@@ -23,4 +19,20 @@ body {
     white-space: normal;
 }
 
+.thumb img {
+    -webkit-filter: grayscale(0);
+    filter: none;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 5px;
+}
 
+.thumb img:hover {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.thumb {
+    padding: 5px;
+}
