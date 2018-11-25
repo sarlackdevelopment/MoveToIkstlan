@@ -40,7 +40,7 @@
 
 <body>
 
-    <div class="container border border-primary mb-1">
+    <header class="container border border-primary mb-1">
         <nav class="navbar navbar-expand-md navbar-dark bg-primary">
             <a class="navbar-brand" href="#">
                 <img src="images/navigation.png">
@@ -89,7 +89,8 @@
                 </a>
             </div>
         </nav>
-    </div>
+    </header>
+
     <div class="container border border-primary">
         <div class="row">
             <div id="newsArea" class="col-4 border-right border-primary">
@@ -117,7 +118,7 @@
                                     </button>
                                 </h5>
                             </div>
-                            <div id="collapse1" class="collapse show" aria-labelledby="heading1" data-parent="#accordion">
+                            <div id="collapse1" class="collapse" aria-labelledby="heading1" data-parent="#accordion">
                                 <div class="card-body">
                                     <p>Дубль второй. Серое небо рушится вбок. Осень в разгаре без компромиссов и
                                         пощады. Все те же старые необходимости, приготовления. Все те же лица,
@@ -277,8 +278,20 @@
                     <div class="tab-pane fade show active" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
 
                         <div class="container border-left border-right border-bottom border-primary">
-                            <img src="images/Caption.png" alt="Питомник норвежской, продажа норвежской, котята норвежской" class="mx-auto d-block img-fluid">
+                            <img src="images/Caption.png" alt="Питомник норвежской, продажа норвежской, котята норвежской"
+                                class="mx-auto d-block img-fluid">
                             <h4 align="center">Питомник норвежских лесных кошек в Москве</h4>
+                        </div>
+
+                        <div id="mainNews">
+                            <div class="alert alert-primary m-1" role="alert">
+                                <p class="text-justify">Внимание всем! У нас родились котята. Скоро появятся фото и
+                                    возможность
+                                    бронированя.</p>
+                                <p class="lead">
+                                    <a class="btn btn-primary btn-sm btn-block" href="kitty.html" role="button">Забронировать</a>
+                                </p>
+                            </div>
                         </div>
 
                         <div class="container border-left border-right border-bottom border-primary">
@@ -1476,7 +1489,7 @@
 
                 </div>
             </div>
-            <div class="row">
+            <div class="row m-1">
 
                 <div id="newsAreaBottom" class="col">
 
@@ -1493,8 +1506,7 @@
                                     </button>
                                 </h5>
                             </div>
-                            <div id="collapseOneBottom" class="collapse show" aria-labelledby="headingOneBottom"
-                                data-parent="#accordionBottom">
+                            <div id="collapseOneBottom" class="collapse" aria-labelledby="headingOneBottom" data-parent="#accordionBottom">
                                 <div class="card-body">
                                     Итак свершилось. Две красавицы обрели новый дом. Через пару часов страх
                                     сменился
@@ -1579,6 +1591,14 @@
         </div>
     </div>
 
+    <footer class="container border border-primary mt-1">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb border border-primary mt-1 mb-1">
+                <li class="breadcrumb-item active" aria-current="page">Главная</li>
+            </ol>
+        </nav>
+    </footer>
+
     <!-- Optional JavaScript -->
     <script>
 
@@ -1587,11 +1607,13 @@
             var $mainArea = $("#mainArea");
             var $newsArea = $("#newsArea");
             var $newsAreaBottom = $("#newsAreaBottom");
+            var $mainNews = $("#mainNews");
 
             if (window.matchMedia('(max-width: 768px)').matches) {
 
                 if ($newsArea.is(':visible')) {
                     $newsArea.hide();
+                    $mainNews.hide();
                 }
 
                 if ($mainArea.hasClass('col-8')) {
@@ -1601,12 +1623,14 @@
 
                 if ($newsArea.is(':hidden')) {
                     $newsAreaBottom.show();
+                    $mainNews.show();
                 }
 
             } else {
 
                 if ($newsArea.is(':hidden')) {
                     $newsArea.show();
+                    $mainNews.show();
                 }
 
                 if ($mainArea.hasClass('col-12')) {
@@ -1616,6 +1640,7 @@
 
                 if ($newsArea.is(':visible')) {
                     $newsAreaBottom.hide();
+                    $mainNews.hide();
                 }
 
             }
