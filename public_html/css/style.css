@@ -42,3 +42,7 @@ body {
 .thumb {
     padding: 5px;
 }
+
+mark {
+    background-color:  transparent;
+}
