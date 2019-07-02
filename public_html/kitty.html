@@ -3437,13 +3437,13 @@
                                                 <p class="text-center">Добрейшего вечера, рада приветствовать!</p>
                                                 <div class="d-flex flex-column justify-content-center bd-highlight">
 
-                                                    <!--<button class="flex-fill bd-highlight btn btn-secondary m-1"
+                                                    <button class="flex-fill bd-highlight btn btn-secondary m-1"
                                                             data-placement="top" data-toggle="popover" title="Обрел дом"
-                                                            data-content="Обрел дом у Владимира из Москвы">Обрел
-                                                            дом</button>-->
-                                                    <button class="flex-fill bd-highlight btn btn-info m-1"
+                                                            data-content="Обрела дом у Игоря из из Железнодорожного">Обрела
+                                                            дом</button>
+                                                    <!--<button class="flex-fill bd-highlight btn btn-info m-1"
                                                         data-placement="top" data-toggle="popover" title="Обрел дом"
-                                                        data-content="Зарезервирована Игорем из Железнодорожного">Резерв</button>
+                                                        data-content="Зарезервирована Игорем из Железнодорожного">Резерв</button>-->
                                                     <!--<button class="flex-fill bd-highlight btn btn-primary m-1"
                                                         data-placement="top" data-toggle="popover"
                                                         title="Резервирование котенка" data-placement="top"
@@ -3458,7 +3458,7 @@
                                                         data-placement="right" data-toggle="popover"
                                                         title="Документы на котенка" data-placement="right"
                                                         data-toggle="popover" title="Документы на котенка"
-                                                        data-content="Слишком мал. Документов нет.">Документы</button>
+                                                        data-content="Слишком мала. Документов нет.">Документы</button>
                                                     <button type="button"
                                                         class="flex-fill bd-highlight btn btn-primary m-1"
                                                         data-toggle="modal" data-target="#kittyLydia">
@@ -3893,11 +3893,11 @@
                                                             data-placement="top" data-toggle="popover" title="Обрел дом"
                                                             data-content="Обрел дом у Владимира из Москвы">Обрел
                                                             дом</button>-->
-                                                    <button class="flex-fill bd-highlight btn btn-primary m-1"
+                                                    <button class="flex-fill bd-highlight btn btn-info m-1"
                                                         data-placement="top" data-toggle="popover"
-                                                        title="Резервирование котенка" data-placement="top"
-                                                        data-toggle="popover" title="Резервирование котенка"
-                                                        data-content="Для резервирования котенка позвоните по номеру +7 904 21 23 817 (Юлия)">Свободен</button>
+                                                        title="Зарезервирован" data-placement="top"
+                                                        data-toggle="popover" title="Зарезервирован"
+                                                        data-content="Зарезервирован Петром из Москвы">Резерв</button>
                                                     <!--<button type="button"
                                                             class="flex-fill bd-highlight btn btn-primary m-1"
                                                             data-toggle="modal" data-target="#LeonDocuments">
@@ -9546,10 +9546,14 @@
 
             let breed_J = $('#v-pills-tab a[href="#v-pills-headingBrood_J"]');
             let breed_K = $('#v-pills-tab a[href="#v-pills-headingBrood_K"]');
+            let breed_L = $('#v-pills-tab a[href="#v-pills-headingBrood_L"]');
+            //let breed_M = $('#v-pills-tab a[href="#v-pills-headingBrood_M"]');
             let archive = $('#v-pills-common-archive');
 
             breed_J.hide();
             breed_K.hide();
+            breed_L.hide();
+            //breed_M.hide();
 
             $('#v-pills-common-archive').on('click', function () {
 
@@ -9560,11 +9564,13 @@
                 if (archive.attr("show") == "1") {
                     breed_J.show();
                     breed_K.show();
+                    breed_L.show();
                     archive.attr("show", "0");
                     archive.html("Скрыть архив");
                 } else {
                     breed_J.hide();
                     breed_K.hide();
+                    breed_L.hide();
                     archive.attr("show", "1");
                     archive.html("Архив");
                 }
